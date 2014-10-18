@@ -1,0 +1,16 @@
+%form{ :action => "/user/create", :method => "post", :class => "pure-form pure-form-aligned"}
+  %div{:class => "pure-control-group"}
+    %label{:for => "name"}
+      Name:
+    %input{:name =>"name", :class => "pure-input-1-2"}
+    %select{:name =>"gender", :class => "pure-input-1-2"}
+      %option{:value =>"male"}
+        Male
+      %option{:value =>"femail"}
+        Female
+      %option{:value =>"other"}
+        Other
+    %label{:for => "details"}
+      Details:
+    %input{:type => "text", :id => "details", :class => "text"}
+    %input{:type => "submit", :value => "Send", :class => "pure-button pure-button-primary"}

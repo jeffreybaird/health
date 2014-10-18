@@ -1,0 +1,16 @@
+%form{ :action => "/measurement/create", :method => "post", :class => "pure-form pure-form-aligned"}
+  %div{:class => "pure-control-group"}
+    %label{:for => "name"}
+      Name:
+    %input{:name =>"name", :class => "pure-input-1-2"}
+    %label{:for => "type"}
+      Type:
+    %input{:type => "text", :name => "type", :class => "text"}
+    %label{:for => "measurement"}
+      Measurement:
+    %input{:type => "text", :name => "measurement", :class => "text"}
+    %select{:name =>"user", :class => "pure-input-1-2"}
+      -@users.each do |user|
+        %option{:value =>"#{user.id}"}
+          =user.name
+    %input{:type => "submit", :value => "Send", :class => "pure-button pure-button-primary"}
